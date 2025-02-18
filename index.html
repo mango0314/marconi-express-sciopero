@@ -13,42 +13,75 @@
       background-color: #f4f4f4;
       color: #333;
     }
-    /* Header */
+
+    /* HEADER + NAV BAR personalizzata */
     header {
-      background-color: #007bff; /* Blu principale */
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+      /* Rimuoviamo colore di sfondo per usare la barra verde */
+      background: #f4f4f4;
+      padding: 0; /* Nessun padding, gestiamo tutto con la nav bar */
     }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    /* Barra di navigazione */
+
+    /* Barra di navigazione in stile “Marconi Express” */
     nav {
-      background-color: #0056b3;
-      overflow: hidden;
+      background-color: #b5d334; /* Verde simile allo screenshot */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px; /* Spaziatura orizzontale */
+      height: 70px;    /* Altezza fissa per la barra */
     }
-    nav ul {
+
+    /* Logo + Testo a sinistra */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Spazio tra l'immagine e il testo */
+    }
+
+    .logo-container img {
+      height: 40px; /* Regola l’altezza del logo */
+    }
+
+    .logo-container span {
+      color: #372b80; /* Viola simile al logo ufficiale */
+      font-weight: bold;
+      font-size: 1.2em;
+      text-transform: lowercase; /* Se lo vuoi tutto minuscolo */
+    }
+
+    /* Menu a destra con voci separate da barre verticali */
+    ul.menu {
       list-style-type: none;
+      display: flex;
       margin: 0;
       padding: 0;
-      text-align: center;
+      align-items: center;
     }
-    nav ul li {
-      display: inline-block;
+
+    ul.menu li {
+      position: relative;
+      /* rimuoviamo padding, useremo le barre verticali */
     }
-    nav ul li a {
-      display: block;
+
+    /* Barre verticali fra le voci di menu */
+    ul.menu li + li::before {
+      content: "|";
       color: #fff;
-      text-align: center;
-      padding: 14px 20px;
+      margin: 0 10px;
+    }
+
+    ul.menu li a {
+      color: #fff;
       text-decoration: none;
+      text-transform: uppercase; /* Testo in maiuscolo */
       font-weight: bold;
+      padding: 0 10px; /* Spazio orizzontale intorno al testo */
     }
-    nav ul li a:hover {
-      background-color: #004494;
+
+    ul.menu li a:hover {
+      opacity: 0.8;
     }
+
     /* Contenuto principale */
     .main-content {
       max-width: 800px;
@@ -81,6 +114,7 @@
       border-radius: 5px;
       margin: 20px 0;
     }
+
     /* Footer */
     footer {
       background-color: #007bff;
@@ -90,6 +124,7 @@
       font-size: 0.9em;
       margin-top: 20px;
     }
+
     a {
       color: #007bff;
       text-decoration: none;
@@ -97,24 +132,49 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Responsivo per schermi più piccoli */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+      }
+      .logo-container {
+        margin-bottom: 10px;
+      }
+      ul.menu {
+        flex-direction: column;
+      }
+      ul.menu li + li::before {
+        content: none; /* Niente barre verticali in verticale */
+      }
+      ul.menu li {
+        margin: 5px 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Header con il logo/titolo -->
+
+  <!-- Header con logo + barra di navigazione -->
   <header>
-    <h1>Marconi Express</h1>
+    <nav>
+      <!-- Logo a sinistra -->
+      <div class="logo-container">
+        <!-- Se hai un’immagine personalizzata, sostituisci l’URL qui sotto -->
+        <img src="https://www.marconiexpress.it/wp-content/uploads/2021/03/logo-marconi-express.png" alt="Marconi Express Logo">
+        <span>marconi express</span>
+      </div>
+      <!-- Menu a destra -->
+      <ul class="menu">
+        <li><a href="#">Biglietti</a></li>
+        <li><a href="#">In viaggio</a></li>
+        <li><a href="#">Informazioni</a></li>
+      </ul>
+    </nav>
   </header>
-  
-  <!-- Barra di navigazione -->
-  <nav>
-    <ul>
-      <li><a href="https://www.marconiexpress.it/">Home</a></li>
-      <li><a href="https://www.marconiexpress.it/aggiornamenti/">Aggiornamenti</a></li>
-      <li><a href="https://www.marconiexpress.it/servizi/">Servizi</a></li>
-      <li><a href="https://www.marconiexpress.it/contatti/">Contatti</a></li>
-    </ul>
-  </nav>
-  
+
   <!-- Contenuto principale -->
   <div class="main-content">
     <div class="update-date">Aggiornato: 20 Febbraio 2025</div>
@@ -144,5 +204,7 @@
   <footer>
     © 2025 Marconi Express S.p.A. - Tutti i diritti riservati.
   </footer>
+
 </body>
 </html>
+
