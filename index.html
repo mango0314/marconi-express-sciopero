@@ -2,41 +2,39 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <!-- Ottimizzazione per dispositivi mobili (iPhone, ecc.) -->
+  <!-- Ottimizzazione per dispositivi mobili -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aggiornamento Sciopero - Marconi Express</title>
-  <style>
-    /* Impedisce l'ingrandimento automatico del testo su iPhone */
-    html {
-      -webkit-text-size-adjust: 100%;
-    }
+  <meta property="og:title" content="Avviso Sciopero Marconi Express">
+<meta property="og:description" content="⚠️ Il servizio Marconi Express sarà soggetto a interruzioni il 20 Febbraio 2025. Clicca qui per maggiori informazioni.">
+<meta property="og:image" content="https://www.marconiexpress.it/wp-content/uploads/2021/03/logo-marconi-express.png">
+<meta property="og:url" content="https://tuo-username.github.io/marconi-express-sciopero/">
 
-    /* Stili di base */
+  <title>Aggiornamento Sciopero - Marconi Express</title>
+  <!-- Importa il font Poppins da Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Impostazioni di base */
     body {
       margin: 0;
       padding: 0;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f4f4f4;
       color: #333;
     }
 
-    /* Header (senza sfondo, perché usiamo la barra verde in <nav>) */
+    /* Header e barra di navigazione */
     header {
       background: #f4f4f4;
       padding: 0;
     }
-
-    /* Barra di navigazione in stile “Marconi Express” */
     nav {
-      background-color: #b5d334; /* Verde simile allo screenshot */
+      background-color: #b5d334; /* Verde simile allo screenshot di riferimento */
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
       height: 70px;
     }
-
-    /* Logo + Testo a sinistra */
     .logo-container {
       display: flex;
       align-items: center;
@@ -46,15 +44,13 @@
       height: 40px;
     }
     .logo-container span {
-      color: #372b80; /* Viola simile al logo */
+      color: #372b80; /* Viola simile al logo ufficiale */
       font-weight: bold;
       font-size: 1.2em;
       text-transform: lowercase;
     }
-
-    /* Menu a destra con voci separate da barre verticali */
     ul.menu {
-      list-style-type: none;
+      list-style: none;
       display: flex;
       margin: 0;
       padding: 0;
@@ -74,7 +70,7 @@
       text-transform: uppercase;
       font-weight: bold;
       padding: 0 10px;
-      font-size: 0.9rem; /* Font leggermente più piccolo per iPhone */
+      font-size: 0.9rem;
     }
     ul.menu li a:hover {
       opacity: 0.8;
@@ -86,7 +82,7 @@
       margin: 20px auto;
       background-color: #fff;
       padding: 30px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .update-date {
       font-size: 0.9em;
@@ -100,6 +96,12 @@
       border-bottom: 2px solid #007bff;
       padding-bottom: 10px;
       font-size: 1.4rem;
+    }
+    /* Banner immagine tra titolo e testo */
+    .banner-image {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
     }
     .content-body p {
       line-height: 1.6;
@@ -117,15 +119,7 @@
       margin-top: 20px;
     }
 
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* --- MEDIA QUERIES --- */
+    /* Media query per schermi piccoli */
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -139,14 +133,12 @@
         flex-direction: column;
       }
       ul.menu li + li::before {
-        content: none; /* Niente barre verticali in versione mobile */
+        content: none;
       }
       ul.menu li {
         margin: 5px 0;
       }
     }
-
-    /* Riduce ulteriormente font e padding su schermi <= 375px (es. iPhone SE) */
     @media (max-width: 375px) {
       .logo-container img {
         height: 35px;
@@ -169,16 +161,13 @@
 </head>
 <body>
 
-  <!-- Header con logo + barra di navigazione -->
+  <!-- Header con logo e barra di navigazione -->
   <header>
     <nav>
-      <!-- Logo a sinistra -->
       <div class="logo-container">
-        <!-- Sostituisci l’URL se hai un logo differente -->
         <img src="https://www.marconiexpress.it/wp-content/uploads/2021/03/logo-marconi-express.png" alt="Marconi Express Logo">
         <span>marconi express</span>
       </div>
-      <!-- Menu a destra -->
       <ul class="menu">
         <li><a href="#">Biglietti</a></li>
         <li><a href="#">In viaggio</a></li>
@@ -191,8 +180,11 @@
   <div class="main-content">
     <div class="update-date">Aggiornato: 20 Febbraio 2025</div>
     <h2 class="content-title">Aggiornamento Sciopero</h2>
+    
+    <!-- Grande immagine/banner -->
+    <img src="https://www.marconiexpress.it/wp-content/uploads/2021/03/sciopero-banner.jpg" alt="Banner Aggiornamento Sciopero" class="banner-image">
+    
     <div class="content-body">
-      <!-- TESTO INSERITO DA TE, con date adattate a 20 febbraio -->
       <p><strong>20 Febbraio 2025</strong><br>
       Le segreterie territoriali di Bologna e Ferrara delle organizzazioni sindacali FILT-CGIL, FIT-CISL, UIL-UILT, FAISA-CISAL, UGL-FNA hanno comunicato l’adesione allo sciopero nazionale di 24 ore, senza il rispetto delle fasce di garanzia, con manifestazione nazionale, di tutte le lavoratrici e lavoratori dipendenti delle imprese cui si applica il CCNL Autoferrotranvieri Internavigatori (Mobilità TPL), proclamato dalle segreterie nazionali degli stessi sindacati per <strong>giovedì 20 febbraio 2025</strong>.</p>
 
