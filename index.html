@@ -4,139 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aggiornamento Sciopero - Marconi Express</title>
-  <!-- Meta per anteprima social (Open Graph) -->
-  <meta property="og:title" content="Aggiornamento Sciopero - Marconi Express">
-  <meta property="og:description" content="Aggiornamento sullo sciopero del servizio Marconi Express. Aggiornato: 20 Febbraio 2025.">
-  <meta property="og:image" content="https://www.marconiexpress.it/wp-content/uploads/2021/03/logo-marconi-express.png">
-  <meta property="og:url" content="https://www.marconiexpress.it/aggiornamento-sciopero-di-venerdi-8-novembre/">
   <style>
-    /* Top bar con widget meteo (più piccolo e posizionato in alto) */
-    .top-bar {
+    /* Stili di base */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: #f4f4f4;
-      padding: 5px 20px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      font-size: 0.9em;
+      color: #333;
     }
-    .top-bar .weather-widget {
-      display: flex;
-      align-items: center;
-    }
-    .top-bar .weather-widget img {
-      width: 24px;
-      height: 24px;
-      margin-right: 5px;
-    }
-    /* Header con logo */
+    /* Header */
     header {
-      background-color: #e60000;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-    }
-    header a {
-      text-decoration: none;
-    }
-    header img {
-      height: 60px;
-      margin-right: 20px;
+      background-color: #007bff; /* Blu principale */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 1.8em;
-      color: #fff;
+      font-size: 2em;
     }
     /* Barra di navigazione */
     nav {
-      background-color: #c40000;
+      background-color: #0056b3;
+      overflow: hidden;
     }
     nav ul {
-      list-style: none;
+      list-style-type: none;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
+      text-align: center;
     }
     nav ul li {
-      margin: 0;
+      display: inline-block;
     }
     nav ul li a {
       display: block;
-      padding: 14px 20px;
       color: #fff;
+      text-align: center;
+      padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
     }
     nav ul li a:hover {
-      background-color: #a00000;
+      background-color: #004494;
     }
     /* Contenuto principale */
-    main {
+    .main-content {
       max-width: 800px;
       margin: 20px auto;
-      padding: 20px;
       background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
     .update-date {
-      text-align: right;
       font-size: 0.9em;
       color: #666;
+      text-align: right;
+      margin-bottom: 10px;
     }
-    h2 {
-      color: #e60000;
-      border-bottom: 2px solid #e60000;
-      padding-bottom: 10px;
+    .content-title {
+      color: #007bff; /* Blu principale */
       margin-top: 0;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
     }
-    p {
+    .content-body p {
       line-height: 1.6;
       margin: 15px 0;
     }
+    /* Sezione garanzia */
     .guarantee {
-      background-color: #ffecec;
-      border-left: 5px solid #e60000;
+      background: #e9f5ff; /* Blu chiaro */
       padding: 15px;
+      border-left: 5px solid #007bff;
+      border-radius: 5px;
       margin: 20px 0;
     }
     /* Footer */
     footer {
-      background-color: #e60000;
+      background-color: #007bff;
       color: #fff;
       text-align: center;
       padding: 15px;
       font-size: 0.9em;
       margin-top: 20px;
     }
-    /* Responsive */
-    @media (max-width: 768px) {
-      header, nav, main, footer {
-        padding: 10px;
-      }
-      header img {
-        height: 50px;
-      }
-      .top-bar {
-        font-size: 0.8em;
-      }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Top bar con widget meteo -->
-  <div class="top-bar">
-    <div class="weather-widget">
-      <img src="https://img.icons8.com/color/48/000000/sun--v1.png" alt="Meteo">
-      <span>Soleggiato, 16°C, Vento moderato</span>
-    </div>
-  </div>
-
-  <!-- Header con logo e titolo -->
+  <!-- Header con il logo/titolo -->
   <header>
-    <a href="https://www.marconiexpress.it/">
-      <img src="https://www.marconiexpress.it/wp-content/uploads/2022/12/730x410_MEX-news_01.jpg" alt="Marconi Express Logo">
-    </a>
     <h1>Marconi Express</h1>
   </header>
   
@@ -151,26 +116,30 @@
   </nav>
   
   <!-- Contenuto principale -->
-  <main>
+  <div class="main-content">
     <div class="update-date">Aggiornato: 20 Febbraio 2025</div>
-    <h2>Aggiornamento Sciopero</h2>
-    <p>
-      Si informa che, a seguito di decisioni sindacali, il servizio Marconi Express subirà interruzioni a causa dello sciopero previsto per il <strong>20 Febbraio 2025</strong>.
-    </p>
-    <p>
-      Durante questo periodo potrebbero verificarsi ritardi e sospensioni temporanee del servizio. Si consiglia ai passeggeri di verificare costantemente gli aggiornamenti e di valutare eventuali soluzioni alternative per i propri spostamenti.
-    </p>
-    <div class="guarantee">
-      <strong>Garanzia di spostamenti:</strong> Durante il periodo di sciopero, garantiamo una frequenza minima di partenze ogni <strong>30 minuti</strong>.
+    <h2 class="content-title">Aggiornamento Sciopero</h2>
+    <div class="content-body">
+      <p>
+        Si informa che, a seguito di decisioni sindacali, il servizio Marconi Express subirà interruzioni a causa dello sciopero previsto per il <strong>20 Febbraio 2025</strong>.
+      </p>
+      <p>
+        Durante questo periodo potrebbero verificarsi ritardi e sospensioni temporanee del servizio. Si consiglia ai passeggeri di verificare costantemente gli aggiornamenti e di valutare eventuali soluzioni alternative per i propri spostamenti.
+      </p>
+      <div class="guarantee">
+        <p>
+          <strong>Garanzia di spostamenti:</strong> Durante il periodo di sciopero, garantiamo una frequenza minima di partenze ogni <strong>30 minuti</strong>.
+        </p>
+      </div>
+      <p>
+        Per ulteriori informazioni e aggiornamenti in tempo reale, consultare regolarmente il nostro sito ufficiale.
+      </p>
+      <p>
+        Restate connessi per ulteriori comunicazioni.
+      </p>
     </div>
-    <p>
-      Per ulteriori informazioni e aggiornamenti in tempo reale, consultare regolarmente il nostro sito ufficiale.
-    </p>
-    <p>
-      Restate connessi per ulteriori comunicazioni.
-    </p>
-  </main>
-  
+  </div>
+
   <!-- Footer -->
   <footer>
     © 2025 Marconi Express S.p.A. - Tutti i diritti riservati.
