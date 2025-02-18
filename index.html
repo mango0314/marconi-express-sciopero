@@ -2,15 +2,17 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Avviso Sciopero Marconi Express">
-<meta property="og:description" content="⚠️ Il servizio Marconi Express sarà soggetto a interruzioni il 20 Febbraio 2025. Clicca qui per maggiori informazioni.">
-<meta property="og:image" content="https://www.marconiexpress.it/wp-content/uploads/2021/03/logo-marconi-express.png">
-<meta property="og:url" content="https://tuo-username.github.io/marconi-express-sciopero/">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aggiornamento Sciopero - Marconi Express</title>
+  <!-- Meta per anteprima social (Open Graph) -->
+  <meta property="og:title" content="Aggiornamento Sciopero - Marconi Express">
+  <meta property="og:description" content="Aggiornamento sullo sciopero del servizio Marconi Express. Aggiornato: 20 Febbraio 2025.">
+  <meta property="og:image" content="https://www.marconiexpress.it/wp-content/uploads/2021/03/logo-marconi-express.png">
+  <meta property="og:url" content="https://www.marconiexpress.it/aggiornamento-sciopero-di-venerdi-8-novembre/">
+  
+  
   <style>
-    /* Stili di base */
+    /* Impostazioni di base */
     body {
       margin: 0;
       padding: 0;
@@ -18,95 +20,140 @@
       background-color: #f4f4f4;
       color: #333;
     }
-    /* Header */
+    /* Header con logo e titolo */
     header {
-      background-color: #007bff; /* Blu principale */
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+      background-color: #e60000;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header a {
+      text-decoration: none;
+    }
+    header img {
+      height: 60px;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 1.5em;
+      color: #fff;
     }
     /* Barra di navigazione */
     nav {
-      background-color: #0056b3;
-      overflow: hidden;
+      background-color: #c40000;
     }
     nav ul {
-      list-style-type: none;
+      list-style: none;
       margin: 0;
       padding: 0;
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
     nav ul li {
-      display: inline-block;
+      margin: 0;
     }
     nav ul li a {
       display: block;
-      color: #fff;
-      text-align: center;
       padding: 14px 20px;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
     nav ul li a:hover {
-      background-color: #004494;
+      background-color: #a00000;
     }
-    /* Contenuto principale */
-    .main-content {
-      max-width: 800px;
+    /* Layout principale a due colonne */
+    .container {
+      max-width: 1200px;
       margin: 20px auto;
-      background-color: #fff;
-      padding: 30px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
     }
-    .update-date {
+    .content {
+      flex: 1 1 70%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .content .update-date {
+      text-align: right;
       font-size: 0.9em;
       color: #666;
-      text-align: right;
-      margin-bottom: 10px;
     }
-    .content-title {
-      color: #007bff; /* Blu principale */
-      margin-top: 0;
-      border-bottom: 2px solid #007bff;
+    .content h2 {
+      color: #e60000;
+      border-bottom: 2px solid #e60000;
       padding-bottom: 10px;
+      margin-top: 0;
     }
-    .content-body p {
+    .content p {
       line-height: 1.6;
       margin: 15px 0;
     }
-    /* Sezione garanzia */
     .guarantee {
-      background: #e9f5ff; /* Blu chiaro */
+      background-color: #ffecec;
+      border-left: 5px solid #e60000;
       padding: 15px;
-      border-left: 5px solid #007bff;
-      border-radius: 5px;
       margin: 20px 0;
+    }
+    /* Sidebar per meteo */
+    .sidebar {
+      flex: 1 1 25%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-left: 20px;
+      height: fit-content;
+    }
+    .sidebar h3 {
+      color: #e60000;
+      border-bottom: 2px solid #e60000;
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+    .weather {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .weather img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    .weather-info {
+      font-size: 1em;
     }
     /* Footer */
     footer {
-      background-color: #007bff;
+      background-color: #e60000;
       color: #fff;
       text-align: center;
       padding: 15px;
       font-size: 0.9em;
       margin-top: 20px;
     }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    /* Responsive per dispositivi mobili */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        margin-left: 0;
+        margin-top: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Header con il logo/titolo -->
+  <!-- Header con logo e titolo -->
   <header>
+    <a href="https://www.marconiexpress.it/">
+      <img src="https://www.marconiexpress.it/wp-content/uploads/2021/03/logo-marconi-express.png" alt="Marconi Express Logo">
+    </a>
     <h1>Marconi Express</h1>
   </header>
   
@@ -120,11 +167,12 @@
     </ul>
   </nav>
   
-  <!-- Contenuto principale -->
-  <div class="main-content">
-    <div class="update-date">Aggiornato: 20 Febbraio 2025</div>
-    <h2 class="content-title">Aggiornamento Sciopero</h2>
-    <div class="content-body">
+  <!-- Container principale con contenuto e sidebar -->
+  <div class="container">
+    <!-- Sezione contenuto principale -->
+    <div class="content">
+      <div class="update-date">Aggiornato: 20 Febbraio 2025</div>
+      <h2>Aggiornamento Sciopero</h2>
       <p>
         Si informa che, a seguito di decisioni sindacali, il servizio Marconi Express subirà interruzioni a causa dello sciopero previsto per il <strong>20 Febbraio 2025</strong>.
       </p>
@@ -132,9 +180,7 @@
         Durante questo periodo potrebbero verificarsi ritardi e sospensioni temporanee del servizio. Si consiglia ai passeggeri di verificare costantemente gli aggiornamenti e di valutare eventuali soluzioni alternative per i propri spostamenti.
       </p>
       <div class="guarantee">
-        <p>
-          <strong>Garanzia di spostamenti:</strong> Durante il periodo di sciopero, garantiamo una frequenza minima di partenze ogni <strong>30 minuti</strong>.
-        </p>
+        <strong>Garanzia di spostamenti:</strong> Durante il periodo di sciopero, garantiamo una frequenza minima di partenze ogni <strong>30 minuti</strong>.
       </div>
       <p>
         Per ulteriori informazioni e aggiornamenti in tempo reale, consultare regolarmente il nostro sito ufficiale.
@@ -143,8 +189,22 @@
         Restate connessi per ulteriori comunicazioni.
       </p>
     </div>
+    
+    <!-- Sidebar con widget Meteo -->
+    <div class="sidebar">
+      <h3>Meteo a Bologna</h3>
+      <div class="weather">
+        <!-- Icona meteo (esempio: soleggiato) -->
+        <img src="https://img.icons8.com/color/96/000000/sun--v1.png" alt="Soleggiato">
+        <div class="weather-info">
+          <p><strong>Soleggiato</strong></p>
+          <p>16°C</p>
+          <p>Vento moderato</p>
+        </div>
+      </div>
+    </div>
   </div>
-
+  
   <!-- Footer -->
   <footer>
     © 2025 Marconi Express S.p.A. - Tutti i diritti riservati.
