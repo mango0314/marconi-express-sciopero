@@ -42,11 +42,17 @@
 	<meta name="twitter:label2" content="Tempo di lettura stimato" />
 	<meta name="twitter:data2" content="2 minuti" />
     <script>
-        var password = "tihofregatacocca"; // Sostituisci con la tua password
-        var userInput = prompt("Inserisci la password per accedere:");
+        // Lista degli URL autorizzati (ad esempio, chi ha ricevuto il link)
+        const allowedReferrers = [
+            "https://marconiexpress.netlify.app/",  // Il tuo sito ufficiale
+            "",  // Per chi scrive l’URL direttamente
+        ];
       
-        if (userInput !== password) {
-          document.body.innerHTML = "<h1>Accesso negato.</h1>";
+        // Controlla da dove proviene il visitatore
+        const referrer = document.referrer;
+      
+        if (!allowedReferrers.includes(referrer)) {
+            document.body.innerHTML = "<h1>Accesso negato.</h1>";
         }
       </script>
       
